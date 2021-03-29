@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="city_name">City Name</string>
+    <string name="lookup">Lookup</string>
+    <string name="clear">Clear</string>
+    <string name="temp_75">Temp: 75</string>
+    <string name="_72">72</string>
+    <string name="feels_like_78">Feels like: 78</string>
+    <string name="clouds">Clouds</string>
+    <string name="broken_clouds">broken clouds</string>
+</resources>

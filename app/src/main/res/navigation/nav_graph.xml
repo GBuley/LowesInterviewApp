@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/cityLookupFragment">
+
+    <fragment
+        android:id="@+id/cityLookupFragment"
+        android:name="com.example.myapplication.view.CityLookupFragment"
+        android:label="fragment_city_lookup"
+        tools:layout="@layout/fragment_city_lookup" >
+        <action
+            android:id="@+id/action_cityLookupFragment_to_temperaturesFragment"
+            app:destination="@id/temperaturesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/temperaturesFragment"
+        android:name="com.example.myapplication.view.TemperaturesFragment"
+        android:label="fragment_temperatures"
+        tools:layout="@layout/fragment_temperatures" >
+        <action
+            android:id="@+id/action_temperaturesFragment_to_detailViewFragment"
+            app:destination="@id/detailViewFragment" />
+        <argument
+            android:name="cityName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailViewFragment"
+        android:name="com.example.myapplication.view.DetailViewFragment"
+        android:label="fragment_detail_view"
+        tools:layout="@layout/fragment_detail_view" >
+        <argument
+            android:name="specificWeatherData"
+            app:argType="com.example.myapplication.model.ForecastData" />
+        <argument
+            android:name="cityName"
+            app:argType="string" />
+    </fragment>
+</navigation>
